@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>练习if else stetment</title>
+</head>
+<body>
+
+<p>如果时间早于 20:00，会获得问候 "Good day"。</p>
+<button onclick="myFunction()">点击这里</button> (按下这个按钮myfunction 这个函数互殴运行)
+<p id="demo"></p>(为了显示结果而设定结果出来的一项)
+<p id="time"></p>
+<p id="night"></p>
+<script>
+function myFunction(){
+	var x="";  (定义x,y任何时候要先定义再用)
+	var y="";
+	
+	var time=new Date().getHours()(这段代码的意思是运行下面ifstetment的时候的time是取当时的时间)
+	if (time<10){
+		x="Good day";
+    }else{
+		y="good night";
+	}
+	
+	document.getElementById("night").innerHTML=y;
+	document.getElementById("demo").innerHTML=x;
+	document.getElementById("time").innerHTML=time;
+
+
+
+if (condition1)
+{
+    当条件 1 为 true 时执行的代码
+}
+else if (condition2)
+{
+    当条件 2 为 true 时执行的代码
+}
+else
+{
+  当条件 1 和 条件 2 都不为 true 时执行的代码
+}
+
+如果时间小于 10:00，则生成问候 "Good morning",
+如果时间大于 10:00 小于 20:00，
+则生成问候 "Good day"，否则生成问候 "Good evening"：
+
+if (time<10)
+{
+    document.write("<b>早上好</b>");
+}
+else if (time>=10 && time<20)
+{
+    document.write("<b>今天好</b>");
+}
+else
+{
+    document.write("<b>晚上好!</b>");
+}
+//-->
+</scrip>
+</body>
+</html>
